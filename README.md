@@ -59,3 +59,5 @@ Integrated both HTML5 native constraints and Bootstrap validation feedback style
 
 Work Process Summary:
 In this project, I built and structured user-friendly web forms using HTML5 and styled them utilizing Bootstrap 5 components. I started by implementing basic HTML contact forms with native validation attributes. Next, I enhanced the layout using Bootstrap's responsive grid system, placeholders, and helper texts. Finally, I developed an advanced registration form incorporating various input types (text, password, radio buttons, checkboxes, and select dropdowns) along with Bootstrap's visual validation feedback states (`is-valid`/`is-invalid`). After testing all form elements and ensuring error-free execution, I organized the project files and published them to GitHub.
+
+Github Page Website: https://abylaikhan295.github.io/front_end_lab4/
