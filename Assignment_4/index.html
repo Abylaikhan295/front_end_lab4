@@ -29,21 +29,25 @@
 <hr>
     
     <h3>Part 2</h3>
-    <form class="mb-4">
+    <form class="mb-4 needs-validation" novalidate>
         <div class="row g-3">
             <div class="col-md-6">
                 <label class="form-label">Name</label>
-                <input type="text" class="form-control is-valid" placeholder="Your name" required>
+                <input type="text" class="form-control" placeholder="Your name" required>
                 <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Name is required.</div>
             </div>
             <div class="col-md-6">
                 <label class="form-label">Email</label>
-                <input type="email" class="form-control is-invalid" placeholder="test@mail.com" required>
+                <input type="email" class="form-control" placeholder="test@mail.com" required>
+                <div class="valid-feedback">Looks good!</div>
                 <div class="invalid-feedback">Email is required.</div>
             </div>
             <div class="col-12">
                 <label class="form-label">Message</label>
-                <textarea class="form-control" rows="2"></textarea>
+                <textarea class="form-control" rows="2" required></textarea>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Message is required.</div>
                 <div class="form-text">We won't share your data.</div>
             </div>
             <div class="col-12">
@@ -54,7 +58,7 @@
     <hr class="my-4">
     
     <h3>Part 3</h3>
-    <form>
+    <form class="needs-validation" novalidate>
         <div class="row g-3">
             <div class="col-md-6">
                 <label class="form-label">First Name</label>
@@ -73,12 +77,12 @@
             </div>
             <div class="col-md-6">
                 <label class="form-label">Password</label>
-                <input type="password" class="form-control" minlength="6" required>
+                <input type="password" id="password" class="form-control" minlength="6" required>
                 <div class="invalid-feedback">Min 6 chars</div>
             </div>
             <div class="col-md-6">
                 <label class="form-label">Confirm Password</label>
-                <input type="password" class="form-control" minlength="6" required>
+                <input type="password" id="confirmPassword" class="form-control" minlength="6" required>
                 <div class="invalid-feedback">Must match</div>
             </div>
             <div class="col-md-6">
@@ -103,7 +107,7 @@
                     <label class="form-check-label">Sports</label>
                 </div>
             </div>
-                <div class="col-12">
+            <div class="col-12">
                 <label class="form-label">Country</label>
                 <select class="form-select" required>
                     <option selected disabled value="">Choose...</option>
@@ -116,12 +120,36 @@
                 </select>
                 <div class="invalid-feedback">Select country</div>
             </div>
-                <div class="col-12 mt-3">
+            <div class="col-12 mt-3">
                 <button type="submit" class="btn btn-primary">Submit</button>
                 <button type="reset" class="btn btn-secondary">Reset</button>
-                </div>
             </div>
-        </form>
+        </div>
+    </form>
     </div>
+
+    <script>
+        const forms = document.querySelectorAll('.needs-validation');
+
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                const password = document.getElementById('password');
+                const confirmPassword = document.getElementById('confirmPassword');
+
+                if (password && confirmPassword && password.value !== confirmPassword.value) {
+                    confirmPassword.setCustomValidity("Passwords must match");
+                } else if (confirmPassword) {
+                    confirmPassword.setCustomValidity("");
+                }
+
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+
+                form.classList.add('was-validated');
+            }, false);
+        });
+    </script>
 </body>
 </html>
