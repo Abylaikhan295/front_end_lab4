@@ -34,7 +34,7 @@ Applied Bootstrap’s explicit validation feedback classes (`is-valid` and `is-i
 Integrated validation feedback message divs (`valid-feedback`, `invalid-feedback`) below inputs (e.g., “Email is required”, “Looks good!”).
 Tested the visual appearance of valid and invalid input borders and messages.
 
-<img width="590" height="274" alt="image" src="https://github.com/user-attachments/assets/925b390c-7600-4fa4-8403-ac99bcb549ea" />
+<img width="776" height="328" alt="image" src="https://github.com/user-attachments/assets/65905df6-bb10-4455-980f-235f48fd4cb8" />
 
 
 
@@ -53,7 +53,8 @@ Submit and Reset buttons
 Styled the entire form using Bootstrap Grid classes to make it fully responsive across devices.
 Integrated both HTML5 native constraints and Bootstrap validation feedback styles.
 
-<img width="587" height="392" alt="image" src="https://github.com/user-attachments/assets/91b0a4b7-90e8-4990-a882-19907c08f326" />
+<img width="589" height="391" alt="image" src="https://github.com/user-attachments/assets/3183ea2e-1749-43d6-8114-00f426cf0f48" />
+
 
 
 
